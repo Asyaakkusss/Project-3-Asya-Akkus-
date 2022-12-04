@@ -26,6 +26,11 @@ const App = () => {
   let [openWinnerDialog, setOpenWinnerDialog] = React.useState(false);
   let [openNameDialog, setOpenNameDialog] = React.useState(false);
 
+  function clearWithCancel() {
+    getXName('');
+    getOName('');
+  }
+
   console.log(array);
   let changeX = (value) => {
     getXName(value);
@@ -212,9 +217,12 @@ const App = () => {
           }}
           variant="contained"
           sx={{ mt: 1 }}
-          onClick={() => letsCloseNameDialog()}
+          onClick={() => {
+            clearWithCancel();
+            letsCloseNameDialog();
+          }}
         >
-          <strong>Cancel</strong>
+          <strong>Clear</strong>
         </Button>
         <Button
           style={{
