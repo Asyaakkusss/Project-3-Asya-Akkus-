@@ -1,0 +1,26 @@
+.App {
+  display: flex;
+  height: 80vh;
+}
+
+.gameTable {
+  margin: auto;
+}
+
+table,
+tr {
+  border: 1px solid purple;
+  background-color: violet;
+  background-image: linear-gradient(to bottom right, pink, violet);
+  padding: 0px;
+  color: purple;
+  text-align: center;
+}
+
+td {
+  border: 1px solid purple;
+  width: 100px;
+  padding: 40px;
+  height: 10vh;
+  font-size: 50px;
+}
